@@ -1,0 +1,48 @@
+﻿$ git log --oneline --graph --all
+* 9516fec Documenta la pr├íctica en el README
+* e65905b A├▒ade sombra al bot├│n principal
+*   c9052cf Resuelve el conflicto de cover.css
+|\  
+| * b0fdb1f Cambia el color del bot├│n principal a verde oscuro
+* | c368c9e Cambia el color del bot├│n principal a morado
+|/  
+*   f2e3096 Merge pull request #2 from eduardosmoralesglez/custom-text
+|\  
+| * 44b1048 Ajusta el texto del pie de p├ígina
+| * 1169f7a Personaliza la portada para la startup
+|/  
+* 671be7d A├▒ade archivos base y CI
+* 0a8a4cd Initial commit
+
+$ git remote -v
+espejo	git@github.com/git-work-espejo.git (fetch)
+espejo	git@github.com/git-work-espejo.git (push)
+espejo2	https://github.com/eduardosmoralesglez/git-work-espejo (fetch)
+espejo2	https://github.com/eduardosmoralesglez/git-work-espejo (push)
+origin	https://github.com/eduardosmoralesglez/git-work (fetch)
+origin	https://github.com/eduardosmoralesglez/git-work (push)
+
+$ git tag
+0.1.0
+
+$ git log --format="%an <%ae>" | sort -u
+Eduardo Morales <eduardomoralez24@gmail.com>
+Eduardo S Morales Glez <113589093+eduardosmoralesglez@users.noreply.github.com>
+Eduardo Serafin Morales Gonzalez <eduardomoralez24@gmail.com>
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+$ gh pr list --state all
+4	Improve UX with cool colors	cool-colors	MERGED	2026-09-30T22:03:20Z
+2	Add custom text for startup contents	custom-text	MERGED	2026-09-30T21:50:00Z
+
+$ gh issue list --state all
+3	OPEN	Improve UX with cool colors		2026-09-30T21:58:01Z
+1	CLOSED	Add custom text for startup contents		2026-09-30T21:57:23Z
+
+$ gh release list
+0.1.0	Latest	0.1.0	2026-09-30T22:11:09Z
